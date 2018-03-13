@@ -38,7 +38,7 @@ var initUser = Promise.resolve(user = {
 var initMessageServer = (new Promise(function (resolve, reject) {
     (function InitAVClient() {
         realtime = new AV.Realtime({
-            appId: appId
+            appId: appId,
         });
         realtime.createIMClient(user.id).then(function (u) {
             console.log("创建client成功");
